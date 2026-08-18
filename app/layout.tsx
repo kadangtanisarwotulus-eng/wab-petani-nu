@@ -1,0 +1,1 @@
+export const metadata={title:'WAB PETANI NU - Sistem Operasi Petani NU',description:'CORE 0.2 FINAL'}; export default function RootLayout({children}:{children:React.ReactNode}){return <html lang='id'><body>{children}</body></html>}
