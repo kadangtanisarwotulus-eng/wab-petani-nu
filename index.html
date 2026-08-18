@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WAB Petani NU</title>
+
+<meta name="description"
+content="WAB Petani NU — Dari Petani, Bersama Petani, Untuk Kemandirian Petani">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f8f4;
+color:#17321f;
+line-height:1.6;
+}
+
+header{
+position:sticky;
+top:0;
+z-index:100;
+background:white;
+border-bottom:1px solid #dfe7df;
+padding:15px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-box{
+width:45px;
+height:45px;
+border-radius:12px;
+background:#17321f;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:23px;
+font-weight:bold;
+}
+
+.logo-title{
+font-weight:bold;
+font-size:17px;
+}
+
+.logo-sub{
+font-size:11px;
+color:#68756b;
+}
+
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:#17321f;
+font-weight:bold;
+font-size:14px;
+}
+
+.hero{
+min-height:82vh;
+padding:90px 8%;
+display:grid;
+grid-template-columns:1.4fr .8fr;
+gap:60px;
+align-items:center;
+background:linear-gradient(135deg,#e8f3e6,#f8fbf7);
+}
+
+.badge{
+display:inline-block;
+padding:7px 14px;
+border:1px solid #b8cfb7;
+border-radius:30px;
+font-size:12px;
+font-weight:bold;
+}
+
+.hero h1{
+font-size:clamp(42px,6vw,76px);
+line-height:1.03;
+margin:20px 0;
+}
+
+.hero h1 span{
+color:#4f8d52;
+}
+
+.hero p{
+font-size:18px;
+max-width:720px;
+color:#56635a;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+margin-top:25px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:13px 20px;
+border-radius:12px;
+background:#17321f;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn.light{
+background:white;
+color:#17321f;
+border:1px solid #c9d8ca;
+}
+
+.hero-card{
+background:white;
+border:1px solid #dce7dc;
+border-radius:25px;
+padding:40px;
+box-shadow:0 15px 40px rgba(20,50,30,.08);
+}
+
+.hero-icon{
+font-size:75px;
+}
+
+section{
+padding:80px 8%;
+max-width:1450px;
+margin:auto;
+}
+
+.section-number{
+color:#6c9b6c;
+font-weight:bold;
+}
+
+h2{
+font-size:34px;
+margin-top:5px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border:1px solid #dfe7df;
+border-radius:20px;
+padding:25px;
+box-shadow:0 8px 30px rgba(20,50,30,.05);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.panel{
+background:white;
+border:1px solid #dfe7df;
+border-radius:20px;
+padding:30px;
+}
+
+.flow{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+align-items:center;
+margin-top:25px;
+}
+
+.flow span{
+padding:10px 15px;
+background:#edf5eb;
+border:1px solid #cfe0cc;
+border-radius:10px;
+font-weight:bold;
+}
+
+.kpis{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.kpi{
+background:white;
+border:1px solid #dfe7df;
+border-radius:18px;
+padding:25px;
+}
+
+.kpi strong{
+display:block;
+font-size:30px;
+}
+
+.kpi small{
+color:#6d796f;
+}
+
+.login{
+max-width:500px;
+background:white;
+padding:30px;
+border-radius:20px;
+border:1px solid #dfe7df;
+}
+
+input{
+width:100%;
+padding:14px;
+margin-bottom:12px;
+border:1px solid #ccd8cd;
+border-radius:10px;
+font-size:16px;
+}
+
+button{
+border:0;
+cursor:pointer;
+}
+
+footer{
+background:#17321f;
+color:white;
+padding:50px 8%;
+}
+
+footer p{
+color:#d4dfd5;
+max-width:800px;
+}
+
+@media(max-width:850px){
+
+header{
+align-items:flex-start;
+gap:15px;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.kpis{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<div class="logo-box">
+W
+</div>
+
+<div>
+<div class="logo-title">
+WAB PETANI NU
+</div>
+
+<div class="logo-sub">
+Ekosistem Kemandirian Petani
+</div>
+
+</div>
+
+</div>
+
+<nav>
+
+<a href="#beranda">Beranda</a>
+<a href="#petani">Petani</a>
+<a href="#ktst">KTST</a>
+<a href="#pendidikan">Sekolah Petani</a>
+<a href="#market">Market</a>
+<a href="#dashboard">Dashboard</a>
+<a href="#login">Login</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero" id="beranda">
+
+<div>
+
+<div class="badge">
+MASTER WAB • VERSI 0.1
+</div>
+
+<h1>
+
+Dari Petani.<br>
+
+Bersama Petani.<br>
+
+<span>Untuk Kemandirian Petani.</span>
+
+</h1>
+
+<p>
+
+WAB Petani NU adalah ekosistem yang menghubungkan petani,
+ilmu, kelembagaan, produksi, pasar, teknologi, data,
+pendidikan dan kaderisasi lintas generasi.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="#petani">
+Mulai dari Petani
+</a>
+
+<a class="btn light" href="#tentang">
+Kenali WAB
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-icon">
+🌱
+</div>
+
+<h3>
+Jalan Tol WAB
+</h3>
+
+<p>
+
+Petani → Data → Ilmu → Produksi →
+Pasar → Pendapatan → Kader →
+Generasi
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="tentang">
+
+<div class="section-number">
+01
+</div>
+
+<h2>
+Apa itu WAB?
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>👨‍🌾 Petani</h3>
+
+<p>
+Petani menjadi subjek utama layanan
+dan penguatan ekosistem.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌱 Ekosistem</h3>
+
+<p>
+Ilmu, produksi, pasar, teknologi
+dan kelembagaan saling terhubung.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌍 Lintas Generasi</h3>
+
+<p>
+Sistem dirancang agar tetap hidup
+ketika pengurus dan teknologi berganti.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="petani">
+
+<div class="section-number">
+02
+</div>
+
+<h2>
+Petani & WAB ID
+</h2>
+
+<div class="panel">
+
+<p>
+
+Versi 0.1 menyiapkan fondasi profil petani.
+Database petani akan diaktifkan pada tahap berikutnya
+setelah sistem keamanan dan kebijakan data siap.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>WAB ID</h3>
+<p>Identitas layanan petani.</p>
+</div>
+
+<div class="card">
+<h3>KTST</h3>
+<p>Kelompok tani berbasis Ranting NU.</p>
+</div>
+
+<div class="card">
+<h3>DATA</h3>
+<p>Berbasis hak akses dan perlindungan data.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="ktst">
+
+<div class="section-number">
+03
+</div>
+
+<h2>
+Kadang Tani Sarwotulus
+</h2>
+
+<div class="panel">
+
+<h3>
+KTST
+</h3>
+
+<p>
+
+Kadang Tani Sarwotulus adalah kelompok tani NU
+berbasis Ranting NU. KTST bukan organisasi tani
+yang berdiri terpisah dari basis Ranting NU.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section id="pendidikan">
+
+<div class="section-number">
+04
+</div>
+
+<h2>
+Sekolah Petani
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🌱 Budidaya</h3>
+<p>
+Tanah, benih, tanaman, hama,
+panen dan pascapanen.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 Agribisnis</h3>
+<p>
+HPP, nilai tambah, pengolahan
+dan pemasaran.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Kaderisasi</h3>
+<p>
+Petani → Mentor → Trainer →
+Pemimpin Ekosistem.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="market">
+
+<div class="section-number">
+05
+</div>
+
+<h2>
+WAB Market
+</h2>
+
+<div class="panel">
+
+<p>
+
+Ruang transaksi petani dan mitra.
+Mesin marketplace akan diaktifkan setelah
+database, pembayaran dan aturan transaksi siap.
+
+</p>
+
+<div class="flow">
+
+<span>Produk</span>
+→
+<span>Order</span>
+→
+<span>Pembayaran</span>
+→
+<span>Logistik</span>
+→
+<span>Settlement</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="dashboard">
+
+<div class="section-number">
+06
+</div>
+
+<h2>
+Dashboard WAB
+</h2>
+
+<div class="kpis">
+
+<div class="kpi">
+<strong>0</strong>
+<small>Petani aktif</small>
+</div>
+
+<div class="kpi">
+<strong>0</strong>
+<small>KTST terhubung</small>
+</div>
+
+<div class="kpi">
+<strong>0</strong>
+<small>Transaksi</small>
+</div>
+
+<div class="kpi">
+<strong>0</strong>
+<small>Program</small>
+</div>
+
+</div>
+
+<p>
+
+Dashboard ini masih berupa prototype.
+Pada WAB 0.2 akan dihubungkan ke database.
+
+</p>
+
+</section>
+
+
+<section id="login">
+
+<div class="section-number">
+07
+</div>
+
+<h2>
+Login WAB
+</h2>
+
+<div class="login">
+
+<input
+id="email"
+type="email"
+placeholder="Email">
+
+<input
+id="password"
+type="password"
+placeholder="Password">
+
+<button
+class="btn"
+onclick="demoLogin()">
+
+Masuk ke Demo
+
+</button>
+
+<p id="loginMsg"></p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h2>
+WAB PETANI NU
+</h2>
+
+<p>
+
+Bangun sistemnya.
+Kuatkan petaninya.
+Hidupkan ekonominya.
+Rawat buminya.
+Didik generasinya.
+Wariskan amanahnya.
+
+</p>
+
+<small>
+WAB Petani NU • Prototype 0.1
+</small>
+
+</footer>
+
+
+<script>
+
+function demoLogin(){
+
+const email =
+document.getElementById("email").value;
+
+const message =
+document.getElementById("loginMsg");
+
+if(!email){
+
+message.innerText =
+"Silakan masukkan email untuk mencoba demo.";
+
+return;
+
+}
+
+message.innerText =
+"Demo WAB aktif. Sistem login database akan diaktifkan pada versi berikutnya.";
+
+}
+
+</script>
+
+</body>
+</html>
